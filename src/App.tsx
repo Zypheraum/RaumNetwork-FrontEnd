@@ -4,6 +4,7 @@ import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { Vision } from './components/Vision';
 import { Footer } from './components/Footer';
+import { Ecosystem } from './components/Ecosystem';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Navbar />
         <Hero />
         <Vision />
+        <Ecosystem />
       </div>
       <Footer/>
     </div>

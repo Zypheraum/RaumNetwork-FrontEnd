@@ -5,18 +5,18 @@ import { useInView } from 'react-intersection-observer';
 const visionSteps = [
   {
     number: '01',
-    title: 'Vision',
-    description: 'Build a Secure and User-Friendly Decentralized Finance Platform allowing users to quickly find the services they need and execute transactions with minimal friction.'
+    title: 'Infrastructure',
+    description: 'Building a robust decentralized infrastructure that combines storage, computation, and cross-chain communication.'
   },
   {
     number: '02',
-    title: 'Inception',
-    description: 'The second step in Raum network\'s vision is to integrate decentralized storage services into its platform. This integration should be seamless and user-friendly.'
+    title: 'Integration',
+    description: 'Creating seamless integrations with major blockchain networks and establishing a comprehensive DeFi ecosystem.'
   },
   {
     number: '03',
-    title: 'Equate',
-    description: 'The final step in Raum network\'s vision is to enable cross-chain interoperability, allowing users to seamlessly move their assets and data between different blockchain networks.'
+    title: 'Innovation',
+    description: 'Advancing Web3 technology through continuous innovation in cryptography, consensus mechanisms, and cross-chain protocols.'
   }
 ];
 
