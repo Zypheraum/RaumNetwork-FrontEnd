@@ -7,7 +7,7 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
-            <span className="gradient-text text-2xl font-bold tracking-tight">raum</span>
+            <span className="gradient-text text-2xl font-bold tracking-tight">Raum.Network</span>
           </div>
           
           <div className="hidden md:block">
@@ -16,14 +16,14 @@ export function Navbar() {
                 Products
               </a>
               <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">
+                Socials
+              </a>
+              <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">
                 Solutions
               </a>
-              <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">
-                Developers
-              </a>
-              <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">
+              {/* <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">
                 About
-              </a>
+              </a> */}
             </div>
           </div>
           

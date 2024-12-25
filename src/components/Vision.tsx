@@ -1,22 +1,37 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { Boxes, GitBranch, Box, User } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { VisionCard } from './VisionCard';
 
 const visionSteps = [
   {
     number: '01',
     title: 'Infrastructure',
-    description: 'Building a robust decentralized infrastructure that combines storage, computation, and cross-chain communication.'
+    description: 'Building a robust decentralized infrastructure that combines storage, computation, and cross-chain communication.',
+    icon: Boxes,
+    comingSoon: false
   },
   {
     number: '02',
     title: 'Integration',
-    description: 'Creating seamless integrations with major blockchain networks and establishing a comprehensive DeFi ecosystem.'
+    description: 'Creating seamless integrations with major blockchain networks and establishing a comprehensive DeFi ecosystem.',
+    icon: GitBranch,
+    comingSoon: false
   },
   {
     number: '03',
     title: 'Innovation',
-    description: 'Advancing Web3 technology through continuous innovation in cryptography, consensus mechanisms, and cross-chain protocols.'
+    description: 'Advancing Web3 technology through continuous innovation in cryptography, consensus mechanisms, and cross-chain protocols.',
+    icon: Box,
+    comingSoon: false
+  },
+  {
+    number: '04',
+    title: 'Adoption',
+    description: 'Fostering mass adoption by focusing on user-friendly interfaces, developer tools, and real-world applications.',
+    icon: User,
+    comingSoon: false
   }
 ];
 
@@ -43,25 +58,14 @@ export function Vision() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           {visionSteps.map((step, index) => (
-            <motion.div
+            <VisionCard
               key={step.number}
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg"
-            >
-              <div className="flex items-start mb-4">
-                <span className="text-4xl font-bold text-blue-600 opacity-50">
-                  {step.number}
-                </span>
-                <h3 className="text-2xl font-semibold ml-4">{step.title}</h3>
-              </div>
-              <p className="text-gray-600 leading-relaxed">
-                {step.description}
-              </p>
-            </motion.div>
+              {...step}
+              delay={index * 0.2}
+              inView={inView}
+            />
           ))}
         </div>
       </div>

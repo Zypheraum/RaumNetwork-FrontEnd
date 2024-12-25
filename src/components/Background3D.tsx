@@ -46,6 +46,8 @@ function GeometricShape({ position, type }: { position: [number, number, number]
           metalness={0.9}
           roughness={0.1}
           envMapIntensity={1}
+          transparent={true}
+          opacity={0.5}
         />
       </mesh>
     </Float>
