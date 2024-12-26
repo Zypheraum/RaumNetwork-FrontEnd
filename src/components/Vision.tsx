@@ -50,7 +50,7 @@ export function Vision() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-6">
+          <h2 className="text-4xl md:text-5xl font-bebas-neue gradient-text mb-6">
             Vision for Raum Network Ecosystem
           </h2>
           <p className="text-lg text-gray-600">

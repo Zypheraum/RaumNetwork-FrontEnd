@@ -7,7 +7,8 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
-            <span className="gradient-text text-2xl font-bold tracking-tight">Raum.Network</span>
+          <img src='src/public/RNlogo-typography.svg' width={220}></img>
+            {/* <span className="gradient-text text-2xl font-bold tracking-tight">Raum.Network</span> */}
           </div>
           
           <div className="hidden md:block">

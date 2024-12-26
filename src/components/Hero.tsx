@@ -2,9 +2,7 @@ import { ArrowRight } from 'lucide-react';
 import { FeatureCard } from './FeatureCard';
 
 
-const features = [
-  
-];
+const features: any[] = [];
 
 export function Hero() {
   return (

@@ -4,36 +4,57 @@ import { useEffect, useState } from 'react'
 // import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 
 const testimonials = [
-  {
-    name: "Roviksi",
-    handle: "@roviksiw",
-    avatar: "/placeholder.svg?height=40&width=40",
-    quote: "What I appreciated most about using tanX was the ability to trade without the need for a middleman."
-  },
-  {
-    name: "Creative Mind",
-    handle: "@creativityflow35",
-    avatar: "/placeholder.svg?height=40&width=40",
-    quote: "The decentralised nature of tanX app meant that I had complete control over my funds at all times."
-  },
-  {
-    name: "Aryan",
-    handle: "Trader, Ex JP Morgan",
-    avatar: "/placeholder.svg?height=40&width=40",
-    quote: "Spreads are fair, orders execute instantly, and the platform is easy to use. It's like someone finally built a DEX for traders, not for profit margins."
-  },
-  {
-    name: "Shane Dickson",
-    handle: "@shadison",
-    avatar: "/placeholder.svg?height=40&width=40",
-    quote: "The ease of integration, the powerful features, and the transparent fee structure are exactly why we use tanX."
-  },
-  {
-    name: "AJ",
-    handle: "Wazirx",
-    avatar: "/placeholder.svg?height=40&width=40",
-    quote: "What impressed me most about this orderbook DEX was the instant trade execution. No more waiting!"
-  }
+
+    {
+      name: "Ethan Rivera",
+      handle: "Blockchain Engineer at InnovateChain",
+      avatar: "/placeholder.svg?height=40&width=40",
+      quote: "RaumFi's decentralized exchange is a marvel of modern engineering. The seamless UX and consistently low gas fees make it stand out in a crowded market."
+    },
+    {
+      name: "Sophia Kim",
+      handle: "Head of Research at Digital Asset Partners",
+      avatar: "/placeholder.svg?height=40&width=40",
+      quote: "Chrysalis with Chainlink CCIP has truly redefined liquid staking. The ability to stake across chains and maximize yield while minting custom tokens is unmatched."
+    },
+    {
+      name: "Liam Walker",
+      handle: "Product Manager at DeFiStack",
+      avatar: "/placeholder.svg?height=40&width=40",
+      quote: "RaumFi’s pair creation feature is a lifesaver. It’s fast, intuitive, and avoids the usual headaches of token liquidity management."
+    },
+    {
+      name: "Isabella Johnson",
+      handle: "CTO at Quantum Finance Solutions",
+      avatar: "/placeholder.svg?height=40&width=40",
+      quote: "The cross-chain staking functionality in Chrysalis is groundbreaking. Managing assets across multiple networks has never been easier or more efficient."
+    },
+    {
+      name: "Oliver Brooks",
+      handle: "CEO of Nexus Ventures",
+      avatar: "/placeholder.svg?height=40&width=40",
+      quote: "RaumFi products are an essential part of our DeFi portfolio. From liquidity optimization to cross-chain staking, they deliver on every front."
+    },
+    {
+      name: "Chloe Adams",
+      handle: "DeFi Advisor at FutureBlocks",
+      avatar: "/placeholder.svg?height=40&width=40",
+      quote: "Chrysalis’s Chainlink CCIP integration enables secure and seamless token transfers across chains. It’s a game-changer for complex staking strategies."
+    },
+    {
+      name: "Lucas Bennett",
+      handle: "Lead Developer at OpenEdge Protocol",
+      avatar: "/placeholder.svg?height=40&width=40",
+      quote: "RaumFi’s ecosystem is built for scalability and efficiency. The hybrid approach to DeFi and storage has given our project a solid backbone."
+    },
+    {
+      name: "Amelia Robinson",
+      handle: "Chief Strategist at Adaptive Finance",
+      avatar: "/placeholder.svg?height=40&width=40",
+      quote: "RaumFi’s seamless integration of DeFi and storage solutions provides unmatched flexibility. It’s the future of blockchain innovation."
+    }
+  
+  
 ]
 
 export function Testimonials() {

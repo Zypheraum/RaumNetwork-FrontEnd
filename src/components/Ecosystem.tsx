@@ -46,8 +46,9 @@ const ecosystemFeatures: EcosystemFeature[] = [
 function EcosystemHeader({ inView }: { inView: boolean }) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
+    whileHover="hover"
+    initial="idle"
+    animate="idle"
       transition={{ duration: 0.6 }}
       className="text-center mb-16"
     >
@@ -74,43 +75,59 @@ function EcosystemCard({
     <>
       <div className="flex items-center justify-between relative z-10">
         <motion.div
-          initial={{ scale: 1 }}
-          whileHover={{ scale: 1.1, rotate: 5 }}
+          variants={{
+            idle: { scale: 1, rotate: 0 },
+            hover: { scale: 1.1, rotate: 5 }
+          }}
           transition={{ type: "spring", stiffness: 300 }}
         >
-          <Icon className="h-12 w-12 text-blue-600 mb-4" />
+          <Icon className="h-12 w-12 text-blue-600 mb-4 group-hover:text-white" />
         </motion.div>
-        {link && <ExternalLink className="h-6 w-6 text-blue-600 mb-8" />}
+        {link && <ExternalLink className="h-6 w-6 text-blue-600 mb-8 group-hover:text-white" />}
       </div>
-      <h3 className="text-xl font-semibold mb-4 flex items-center gap-3">
+      <h3 className="text-xl font-semibold mb-4 flex items-center gap-3 group-hover:text-white">
         {title}
         {comingSoon && (
           <motion.span
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="text-xs font-normal px-2 py-1 bg-blue-100 text-blue-600 rounded-full"
+            className="text-xs font-normal px-2 py-1 bg-blue-100 text-blue-600 rounded-full group-hover:bg-white group-hover:text-blue-600"
           >
             Coming Soon
           </motion.span>
         )}
       </h3>
-      <p className="text-gray-600 leading-relaxed">{description}</p>
+      <p className="text-gray-600 leading-relaxed group-hover:text-white">{description}</p>
     </>
   );
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
+      // initial={{ opacity: 0, y: 20 }}
+      // animate={inView ? { opacity: 1, y: 0 } : {}}
+      whileHover="hover"
+      initial="idle"
+      animate="idle"
       transition={{ 
-        duration: 0.6, 
+        duration: 0.4, 
         delay, 
         ease: [0.22, 1, 0.36, 1] 
       }}
-      whileHover={{ scale: 1.02, translateY: -5 }}
-      className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg overflow-hidden hover:bg-black hover:bg-opacity-10 transition-colors duration-300 h-full"
+      variants={{
+        idle: {
+          scale: 1,
+          y: 0,
+          transition: { duration: 0.1 }
+        },
+        hover: {
+          scale: 1.02,
+          y: -5,
+          transition: { duration: 0.1 }
+        }
+      }}
+      className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg overflow-hidden hover:bg-[#2563eb] transition-all duration-150 h-full"
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-150" />
       
       {link ? (
         <a
@@ -129,7 +146,10 @@ function EcosystemCard({
         className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-blue-500 to-blue-600"
         initial={{ width: "0%" }}
         whileHover={{ width: "100%" }}
-        transition={{ duration: 0.3 }}
+        transition={{ 
+          duration: 0.01,
+          ease: "easeInOut"
+        }}
       />
     </motion.div>
   );
@@ -157,21 +177,21 @@ export function Ecosystem() {
           <div className="col-span-1">
             <EcosystemCard
               {...ecosystemFeatures[1]}
-              delay={0.2}
+              delay={0}
               inView={inView}
             />
           </div>
           <div className="col-span-1">
             <EcosystemCard
               {...ecosystemFeatures[2]}
-              delay={0.4}
+              delay={0}
               inView={inView}
             />
           </div>
           <div className="col-span-3">
             <EcosystemCard
               {...ecosystemFeatures[3]}
-              delay={0.6}
+              delay={0}
               inView={inView}
             />
           </div>
