@@ -5,6 +5,8 @@ import { Hero } from './components/Hero';
 import { Vision } from './components/Vision';
 import { Footer } from './components/Footer';
 import { Ecosystem } from './components/Ecosystem';
+import { FAQ } from './components/FAQ';
+import { Testimonials } from './components/Testimonials';
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
         <Hero />
         <Vision />
         <Ecosystem />
+        <Testimonials/>
+        <FAQ />
       </div>
       <Footer/>
     </div>

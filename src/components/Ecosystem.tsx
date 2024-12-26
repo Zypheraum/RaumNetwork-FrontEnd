@@ -1,7 +1,9 @@
+"use client"
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Database, Lock, Cpu, Network, ExternalLink, LucideIcon } from 'lucide-react';
+import { Database, Lock, Cpu, Network, ExternalLink, type LucideIcon } from 'lucide-react';
 
 interface EcosystemFeature {
   icon: LucideIcon;
@@ -20,24 +22,25 @@ const ecosystemFeatures: EcosystemFeature[] = [
     link: 'https://dex.raum.network'
   },
   {
+    icon: Database,
+    title: 'Decentralized Storage',
+    description: 'Enterprise-grade storage solution with end-to-end encryption and distributed redundancy.',
+    comingSoon: false
+  },
+{
+  icon: Lock,
+  title: 'ZK Proof',
+  description: 'Privacy-preserving computation and verification using advanced ZK technology.',
+  comingSoon: true
+  },
+  {
     icon: Cpu,
     title: 'Chrysalis',
     description: 'Stake your assets across multiple blockchain networks through unified protocol, earning rewards while contributing to network security and interoperability',
     comingSoon: true,
     link:'https://tally.so/r/wL7Y5j'
   },
-  {
-    icon: Database,
-    title: 'Decentralized Storage',
-    description: 'Enterprise-grade storage solution with end-to-end encryption and distributed redundancy.',
-    comingSoon: false
-  },
-  {
-    icon: Lock,
-    title: 'Zero-Knowledge Proofs',
-    description: 'Privacy-preserving computation and verification using advanced ZK technology.',
-    comingSoon: true
-  }
+  
 ];
 
 function EcosystemHeader({ inView }: { inView: boolean }) {
@@ -105,7 +108,7 @@ function EcosystemCard({
         ease: [0.22, 1, 0.36, 1] 
       }}
       whileHover={{ scale: 1.02, translateY: -5 }}
-      className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg overflow-hidden hover:bg-black hover:bg-opacity-10 transition-colors duration-300"
+      className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg overflow-hidden hover:bg-black hover:bg-opacity-10 transition-colors duration-300 h-full"
     >
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
       
@@ -143,17 +146,38 @@ export function Ecosystem() {
       <div className="max-w-6xl mx-auto px-4">
         <EcosystemHeader inView={inView} />
 
-        <div className="grid md:grid-cols-2 gap-8">
-          {ecosystemFeatures.map((feature, index) => (
+        <div className="grid grid-cols-4 gap-8">
+          <div className="col-span-3">
             <EcosystemCard
-              key={feature.title}
-              {...feature}
-              delay={index * 0.2}
+              {...ecosystemFeatures[0]}
+              delay={0}
               inView={inView}
             />
-          ))}
+          </div>
+          <div className="col-span-1">
+            <EcosystemCard
+              {...ecosystemFeatures[1]}
+              delay={0.2}
+              inView={inView}
+            />
+          </div>
+          <div className="col-span-1">
+            <EcosystemCard
+              {...ecosystemFeatures[2]}
+              delay={0.4}
+              inView={inView}
+            />
+          </div>
+          <div className="col-span-3">
+            <EcosystemCard
+              {...ecosystemFeatures[3]}
+              delay={0.6}
+              inView={inView}
+            />
+          </div>
         </div>
       </div>
     </section>
   );
 }
+
