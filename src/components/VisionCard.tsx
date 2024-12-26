@@ -35,9 +35,9 @@ export function VisionCard({
     >
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
       
-      <div className="absolute top-0 right-0 p-4 opacity-10 text-4xl font-bold text-blue-600">
+      {/* <div className="absolute top-0 right-0 p-4 opacity-10 text-4xl font-bold text-blue-600">
         {number}
-      </div>
+      </div> */}
 
       <motion.div
         initial={{ scale: 1 }}
