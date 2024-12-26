@@ -29,8 +29,8 @@ export function FAQ() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-24">
-      <div className="border border-gray-800 rounded-2xl backdrop-blur-sm p-8 flex flex-col md:flex-row gap-8">
-        <div className="md:w-1/3 md:border-r border-gray-800 md:pr-8 flex items-center">
+      <div className="rounded-2xl backdrop-blur-sm p-8 flex flex-col md:flex-row gap-8">
+        <div className="md:w-1/3 flex items-center">
           <h2 className="text-4xl md:text-5xl font-bold gradient-text">
             Frequently Asked Questions
           </h2>
