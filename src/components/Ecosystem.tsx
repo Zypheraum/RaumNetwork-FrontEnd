@@ -166,8 +166,8 @@ export function Ecosystem() {
       <div className="max-w-6xl mx-auto px-4">
         <EcosystemHeader inView={inView} />
 
-        <div className="grid grid-cols-4 gap-8">
-          <div className="col-span-3">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="col-span-1 md:col-span-3">
             <EcosystemCard
               {...ecosystemFeatures[0]}
               delay={0}
@@ -188,7 +188,7 @@ export function Ecosystem() {
               inView={inView}
             />
           </div>
-          <div className="col-span-3">
+          <div className="col-span-1 md:col-span-3">
             <EcosystemCard
               {...ecosystemFeatures[3]}
               delay={0}

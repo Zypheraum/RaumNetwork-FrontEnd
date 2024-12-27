@@ -43,7 +43,7 @@ export function FAQ() {
               className="border border-gray-800 rounded-lg overflow-hidden bg-opacity-5"
             >
               <button
-                className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-900/5"
+                className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-[#2563eb] bg-gradient-to-br from-blue-50/50 to-transparent"
                 onClick={() => toggleFaq(index)}
               >
                 <span className="text-lg font-medium">{faq.question}</span>
