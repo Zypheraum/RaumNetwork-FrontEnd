@@ -22,6 +22,13 @@ const ecosystemFeatures: EcosystemFeature[] = [
     link: 'https://dex.raum.network'
   },
   {
+    icon: Cpu,
+    title: 'Chrysalis',
+    description: 'Stake your assets across multiple blockchain networks through unified protocol, earning rewards while contributing to network security and interoperability',
+    comingSoon: true,
+    link:'https://tally.so/r/wL7Y5j'
+  },
+  {
     icon: Database,
     title: 'Decentralized Storage',
     description: 'Enterprise-grade storage solution with end-to-end encryption and distributed redundancy.',
@@ -33,13 +40,7 @@ const ecosystemFeatures: EcosystemFeature[] = [
   description: 'Privacy-preserving computation and verification using advanced ZK technology.',
   comingSoon: true
   },
-  {
-    icon: Cpu,
-    title: 'Chrysalis',
-    description: 'Stake your assets across multiple blockchain networks through unified protocol, earning rewards while contributing to network security and interoperability',
-    comingSoon: true,
-    link:'https://tally.so/r/wL7Y5j'
-  },
+  
   
 ];
 
