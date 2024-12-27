@@ -1,5 +1,3 @@
-"use client"
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
@@ -22,6 +20,35 @@ const ecosystemFeatures: EcosystemFeature[] = [
     link: 'https://dex.raum.network'
   },
   {
+    icon: Database,
+    title: 'Decentralized Storage',
+    description: 'Enterprise-grade storage solution with end-to-end encryption and distributed redundancy.',
+    comingSoon: false
+  },
+  {
+    icon: Lock,
+    title: 'ZK Proof',
+    description: 'Privacy-preserving computation and verification using advanced ZK technology.',
+    comingSoon: true
+  },
+  {
+    icon: Cpu,
+    title: 'Chrysalis',
+    description: 'Stake your assets across multiple blockchain networks through unified protocol, earning rewards while contributing to network security and interoperability',
+    comingSoon: true,
+    link:'https://tally.so/r/wL7Y5j'
+  },
+];
+
+const ecosystemFeaturesMobile: EcosystemFeature[] = [
+  {
+    icon: Network,
+    title: 'Decentralized Exchange',
+    description: 'Empowering seamless trading on Stellar with next-gen AMM V2 for optimized liquidity and precision swaps.',
+    comingSoon: false,
+    link: 'https://dex.raum.network'
+  },
+  {
     icon: Cpu,
     title: 'Chrysalis',
     description: 'Stake your assets across multiple blockchain networks through unified protocol, earning rewards while contributing to network security and interoperability',
@@ -34,22 +61,20 @@ const ecosystemFeatures: EcosystemFeature[] = [
     description: 'Enterprise-grade storage solution with end-to-end encryption and distributed redundancy.',
     comingSoon: false
   },
-{
-  icon: Lock,
-  title: 'ZK Proof',
-  description: 'Privacy-preserving computation and verification using advanced ZK technology.',
-  comingSoon: true
+  {
+    icon: Lock,
+    title: 'ZK Proof',
+    description: 'Privacy-preserving computation and verification using advanced ZK technology.',
+    comingSoon: true
   },
-  
-  
 ];
 
 function EcosystemHeader({ inView }: { inView: boolean }) {
   return (
     <motion.div
-    whileHover="hover"
-    initial="idle"
-    animate="idle"
+      whileHover="hover"
+      initial="idle"
+      animate="idle"
       transition={{ duration: 0.6 }}
       className="text-center mb-16"
     >
@@ -104,8 +129,6 @@ function EcosystemCard({
 
   return (
     <motion.div
-      // initial={{ opacity: 0, y: 20 }}
-      // animate={inView ? { opacity: 1, y: 0 } : {}}
       whileHover="hover"
       initial="idle"
       animate="idle"
@@ -167,8 +190,9 @@ export function Ecosystem() {
       <div className="max-w-6xl mx-auto px-4">
         <EcosystemHeader inView={inView} />
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="col-span-1 md:col-span-3">
+        {/* Desktop Layout */}
+        <div className="hidden md:grid grid-cols-4 gap-8">
+          <div className="col-span-3">
             <EcosystemCard
               {...ecosystemFeatures[0]}
               delay={0}
@@ -189,7 +213,7 @@ export function Ecosystem() {
               inView={inView}
             />
           </div>
-          <div className="col-span-1 md:col-span-3">
+          <div className="col-span-3">
             <EcosystemCard
               {...ecosystemFeatures[3]}
               delay={0}
@@ -197,8 +221,21 @@ export function Ecosystem() {
             />
           </div>
         </div>
+
+        {/* Mobile Layout */}
+        <div className="grid md:hidden grid-cols-1 gap-6">
+          {ecosystemFeaturesMobile.map((feature, index) => (
+            <EcosystemCard
+              key={feature.title}
+              {...feature}
+              delay={index * 0.1}
+              inView={inView}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
 }
 
+// export default App;
