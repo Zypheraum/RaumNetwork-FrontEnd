@@ -115,7 +115,7 @@ export function Navbar() {
                 </SheetHeader>
                 <div className="flex flex-col space-y-4 mt-8">
                   <div className="space-y-4 border-b pb-4">
-                    <p className="text-sm font-medium text-gray-500">Products</p>
+                    <p className="text-sm font-bold text-black-500">Products</p>
                     <div className="space-y-2">
                       <a 
                         href="/raumfi-dex" 
@@ -139,7 +139,7 @@ export function Navbar() {
                   </div>
                   
                   <div className="space-y-4 border-b pb-4">
-                    <p className="text-sm font-medium text-gray-500">Socials</p>
+                    <p className="text-sm font-bold text-black-500">Socials</p>
                     <div className="space-y-2">
                       <a 
                         href="https://discord.com" 
@@ -169,7 +169,7 @@ export function Navbar() {
                     <a 
                       href="https://service.raum.network" 
                       target="_blank"
-                      className="block px-4 py-2 text-gray-600 hover:bg-gradient-to-br hover:bg-[#2563eb] hover:to-transparent hover:text-white rounded-md transition-all duration-200"
+                      className="block px-4 py-2 text-black-500 hover:bg-gradient-to-br hover:bg-[#2563eb] hover:to-transparent hover:text-white rounded-md transition-all duration-200"
                     >
                       Solutions
                     </a>
